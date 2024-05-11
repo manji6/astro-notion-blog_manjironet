@@ -1,0 +1,19 @@
+---
+export interface Props {
+  scriptUrl: string
+}
+
+const { scriptUrl = '' } = Astro.props
+---
+
+{
+  scriptUrl && (
+    <>
+      <script
+        is:inline
+        async
+        src={`${scriptUrl}`}
+      />
+    </>
+  )
+}
