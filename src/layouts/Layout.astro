@@ -28,7 +28,7 @@ const siteOGImage = new URL(
   Astro.site
 )
 
-let coverImageURL: string
+let coverImageURL!: string
 if (database.Cover) {
   if (database.Cover.Type === 'external') {
     coverImageURL = database.Cover.Url
@@ -52,7 +52,7 @@ if (database.Icon && database.Icon.Type === 'file') {
 ---
 
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="ja" prefix="og: https://ogp.me/ns#">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="max-image-preview:large" />
@@ -202,7 +202,7 @@ if (database.Icon && database.Icon.Type === 'file') {
     display: block;
     width: 100%;
     height: 20vh;
-    object-fit: cover;
+/*    object-fit: cover; */
     object-position: center 60%;
   }
 
